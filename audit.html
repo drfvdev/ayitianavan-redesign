@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayiti an Avan Audit</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:opsz,wght@6..72,400..700&display=swap">
+<style>
+/* Layout: single reading column report with before/after figures and a priority table. */
+:root{--paper:#fff;--paper-2:#f3f5fa;--ink:#0f1730;--ink-2:#4a5470;--rule:#dce1ec;--navy:#0c1f5c;--red:#d21034;--ok:#11734b;
+  --serif:"Newsreader",Georgia,serif;--sans:"Archivo","Helvetica Neue",Arial,sans-serif;color-scheme:light}
+@media (prefers-color-scheme: dark){:root{--paper:#0d1222;--paper-2:#141b30;--ink:#e9ecf5;--ink-2:#a3abc4;--rule:#273150;--navy:#0b1847;--red:#ff4d63;--ok:#4fd39a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6}
+a{color:var(--red)}
+.top{background:var(--navy);color:#fff;font-family:var(--sans)}
+.top .in{max-width:860px;margin:auto;padding:14px max(16px,env(safe-area-inset-left,0px));display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.top a{color:#fff;font-weight:700;font-size:14px}
+.wm{font-weight:900;font-stretch:72%;font-size:26px;line-height:1}
+.wm b{background:var(--red);font-size:12px;padding:1px 5px;margin-left:4px;font-weight:800;vertical-align:4px}
+main{max-width:860px;margin:auto;padding:36px max(16px,env(safe-area-inset-right,0px)) 60px max(16px,env(safe-area-inset-left,0px))}
+.eyebrow{font-family:var(--sans);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+h1{font-size:clamp(32px,5vw,46px);line-height:1.08;margin:8px 0 12px;text-wrap:balance}
+h2{font-family:var(--sans);font-weight:900;font-stretch:80%;font-size:26px;text-transform:uppercase;border-top:3px solid var(--ink);padding-top:10px;margin:48px 0 14px}
+h3{font-size:21px;margin:26px 0 6px}
+p,li{max-width:68ch}
+.lede{font-size:21px;color:var(--ink-2)}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:18px 0}
+figure{margin:0}
+figure img{width:100%;height:auto;display:block;border:1px solid var(--rule)}
+figcaption{font-family:var(--sans);font-size:13px;color:var(--ink-2);margin-top:6px}
+.tbl{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;min-width:620px;font-family:var(--sans);font-size:14.5px}
+th,td{border-bottom:1px solid var(--rule);padding:10px 8px;text-align:left;vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.p{font-weight:800;font-size:11px;letter-spacing:.06em;padding:2px 7px;border-radius:2px;white-space:nowrap}
+.p1{background:var(--red);color:#fff}.p2{background:var(--navy);color:#fff}.p3{border:1px solid var(--ink-2);color:var(--ink-2)}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);font-family:var(--sans);font-weight:700;padding:12px 18px;border-radius:3px;text-decoration:none;margin-top:8px}
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:10px}
+.ref{border:1px solid var(--rule);padding:14px 16px;font-size:16px}
+.ref b{font-family:var(--sans);display:block;font-size:14px;margin-bottom:4px}
+ol li,ul li{margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="top"><div class="in"><span class="wm">AYITI<b>an avan</b></span><a href="index.html">See the redesign →</a></div></div>
+<main>
+  <span class="eyebrow">Site audit · 17 October 2026</span>
+  <h1>Why ayitianavan.com looks unfinished, and how the redesign fixes it</h1>
+  <p class="lede">The site has good, regular reporting. The problem is presentation: the homepage gives no sense of what matters today, the header spends its space on a weather widget, and several blocks are empty or out of date. Readers judge credibility in seconds, and right now the layout works against the journalism.</p>
+  <a class="cta" href="index.html">Open the redesign</a>
+
+  <h2>What the site looks like today</h2>
+  <div class="figs">
+    <figure><img src="audit-img/desk-top.jpg" alt="Current desktop header"><figcaption>Desktop: tiny logo, weather widget takes the header, "Breaking news" box is empty.</figcaption></figure>
+    <figure><img src="audit-img/desk-lead.jpg" alt="Current lead story area"><figcaption>The lead story's photo sits in a mostly empty white card; "En Tendance" shows stories from 2025.</figcaption></figure>
+    <figure><img src="audit-img/mob-top.jpg" alt="Current mobile homepage"><figcaption>Mobile: English labels on a French site, and an ad lands right after the first story.</figcaption></figure>
+    <figure><img src="audit-img/desk-foot.jpg" alt="Current footer"><figcaption>Footer: flat navy block with centered links and little hierarchy.</figcaption></figure>
+  </div>
+
+  <h2>Findings</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Priority</th><th>Problem</th><th>Fix in the redesign</th></tr></thead>
+    <tbody>
+      <tr><td><span class="p p1">HIGH</span></td><td>The logo is about 45 px tall and nearly invisible; the weather widget (33 °C, 5:35 pm) is the biggest thing in the header.</td><td>Large masthead in the brand's navy and red; weather moved to a small line in the top bar.</td></tr>
+      <tr><td><span class="p p1">HIGH</span></td><td>"Breaking News" is an empty box on desktop. "Latest News" shows one headline next to a small photo with a large blank area.</td><td>Front page built like a newspaper: live "À la minute" column, a big lead story with related links, and a "Les plus lus" ranking.</td></tr>
+      <tr><td><span class="p p1">HIGH</span></td><td>"En Tendance" features stories from March, August and December 2025, so the site looks abandoned.</td><td>Trending topics strip and most-read list driven by recent traffic only.</td></tr>
+      <tr><td><span class="p p1">HIGH</span></td><td>Mixed languages: "LATEST NEWS", "BREAKING NEWS" and English dates ("2 September 2026") on a French-language site.</td><td>All interface text in French with a FR / KREYÒL switch; dates formatted the French way.</td></tr>
+      <tr><td><span class="p p2">MEDIUM</span></td><td>Below the fold, 25 stories sit in one undifferentiated two-column grid with no sections.</td><td>Section blocks (Sécurité, Économie, Société, Diaspora, Éducation) so readers can scan by topic.</td></tr>
+      <tr><td><span class="p p2">MEDIUM</span></td><td>Video is a small YouTube block halfway down. There is no place for live TV or short vertical videos.</td><td>"Direct TV" button in the header, live player on the front page, a full TV page with a schedule, and a Shorts rail with a vertical player.</td></tr>
+      <tr><td><span class="p p2">MEDIUM</span></td><td>Several thumbnails have headlines baked into the image (TPS, inscription électorale), which looks like social media rather than a newsroom.</td><td>Use clean photos for articles; keep text-on-image graphics for Shorts and social posts.</td></tr>
+      <tr><td><span class="p p2">MEDIUM</span></td><td>Two typefaces (Oswald and Roboto) plus the system font; condensed Oswald headlines feel loud and cramped.</td><td>One serif for headlines and reading (Newsreader) and one sans for labels and navigation (Archivo).</td></tr>
+      <tr><td><span class="p p3">LOW</span></td><td>The homepage loads 65 scripts and 57 stylesheets (155 requests). Elementor plus plugins slow it down on Haitian mobile networks.</td><td>Build the new theme with fewer plugins; lazy-load images and video.</td></tr>
+      <tr><td><span class="p p3">LOW</span></td><td>The newest homepage story is dated 2 September 2026, six weeks ago.</td><td>A design can't fix this, but "À la minute" makes regular publishing visible and rewards it.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>What we borrowed from other newsrooms</h2>
+  <div class="refs">
+    <div class="ref"><b>Juno7 (Haiti)</b>Strong section navigation and a "Les plus lus" ranking in the right column.</div>
+    <div class="ref"><b>Le Nouvelliste (Haiti)</b>Centered masthead, "À la minute" timeline on the left, serif headlines.</div>
+    <div class="ref"><b>The Haitian Times (diaspora)</b>Topic strip under the menu and a calm, white layout with thin rules.</div>
+    <div class="ref"><b>ABC News (US)</b>"Trending" strip of today's topics right under the navigation.</div>
+    <div class="ref"><b>Fox News (US)</b>Red "Watch TV" button always visible and an "On air now" module in the right column.</div>
+    <div class="ref"><b>France 24 / Le Monde (France)</b>"En continu" feed, "Direct TV" in the main menu, replays, and a clean reading page with a drop cap and a summary box.</div>
+  </div>
+
+  <h2>How to put this on the real site</h2>
+  <ol>
+    <li><b>Keep WordPress.</b> All your articles, categories and authors stay where they are. Only the theme changes.</li>
+    <li><b>Build a custom theme</b> (or a block theme) from this mockup, replacing the Elementor layouts. The homepage pulls the lead story, "À la minute" and section blocks from your existing categories.</li>
+    <li><b>Live TV:</b> stream through YouTube Live (free, easiest) or a provider such as Mux or Vimeo Livestream, then embed the player where the mockup shows it.</li>
+    <li><b>Shorts:</b> upload vertical videos as a new "Short" post type in WordPress (or pull them from your YouTube Shorts / Instagram Reels feed), and the rail and vertical player display them automatically.</li>
+    <li><b>Language:</b> add Kreyòl with a translation plugin such as Polylang so the FR / KREYÒL switch works.</li>
+  </ol>
+  <p>Estimated effort: about 2–3 weeks for a developer to turn the mockup into a working WordPress theme, plus setup for the live stream.</p>
+</main>
+</body>
+</html>
